@@ -17,3 +17,5 @@ COPY main.py .
 
 ENTRYPOINT [ "python" ]
 CMD ["/app/main.py"]
+
+LABEL org.opencontainers.image.source=https://github.com/betagouv/grist-redis-exporter

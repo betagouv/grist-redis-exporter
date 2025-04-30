@@ -1,1 +1,1 @@
-docker build -t ghcr.io/betagouv/grist-utils/grist-redis-exporter:latest --push .
+docker build -t ghcr.io/betagouv/grist-redis-exporter:latest --push .
