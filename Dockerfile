@@ -1,11 +1,11 @@
-FROM python:3.13-slim AS builder
+FROM python:3.13.7-slim-bookworm AS builder
 COPY --from=ghcr.io/astral-sh/uv:latest /uv /uvx /bin/
 WORKDIR /app
 
 COPY uv.lock pyproject.toml ./
 RUN uv sync --frozen --no-install-project --no-editable
 
-FROM python:3.13-slim
+FROM python:3.13.7-slim-bookworm
 WORKDIR /app
 
 COPY --from=builder --chown=app:app /app/.venv /app/.venv
